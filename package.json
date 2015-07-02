@@ -22,8 +22,11 @@
     "webpack": "^1.9.10"
   },
   "dependencies": {
+    "backbone": "^1.2.1",
+    "isomorphic-fetch": "^2.1.0",
     "jquery": "^2.1.4",
-    "lodash": "^3.10.0"
+    "lodash": "^3.10.0",
+    "react": "^0.13.3"
   },
   "scripts": {
     "start": "npm install && bower install && gulp"

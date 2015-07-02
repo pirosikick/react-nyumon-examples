@@ -12,12 +12,13 @@ if (isProduction) {
 module.exports = {
   context: __dirname + '/src',
   entry: {
-    client: './client'
+    client: './client',
+    "16.1.1": './16.1.1.js'
   },
   output: {
     path: path.join(
       __dirname,
-      isProduction ? '.tmp' : 'build',
+      isProduction ? 'build' : '.tmp',
       'scripts'
     ),
     filename: "[name].bundle.js"
