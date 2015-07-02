@@ -13,7 +13,8 @@ module.exports = {
   context: __dirname + '/src',
   entry: {
     client: './client',
-    "16.1.1": './16.1.1.js'
+    "16.1.1": './16.1.1.js',
+    "16.1.2": './16.1.2.js'
   },
   output: {
     path: path.join(

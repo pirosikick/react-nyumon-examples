@@ -2,27 +2,13 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import React, {Component} from 'react';
+import Hello from './components/Hello.jsx';
 
-class Hello extends Component {
-  render () {
-    let {name} = this.props;
 
-    return (
-      <div className="app">
-        <h1>Hello! {name || "wakizaki"}</h1>
-
-        <ul>
-          <li>
-            <a href="#/hello/shibata">柴田くん</a>
-          </li>
-          <li>
-            <a href="#/hello/morimoto">森本さん</a>
-          </li>
-        </ul>
-      </div>
-    );
-  }
-}
+const links = [
+  <a href='#/hello/morimoto'>森本さん</a>,
+  <a href='#/hello/shibata'>柴田くん</a>
+];
 
 let Router = Backbone.Router.extend({
   routes: {
@@ -30,12 +16,9 @@ let Router = Backbone.Router.extend({
     "hello": "hello",
     "hello/:name": "hello"
   },
-  hello: (name) => {
-    React.render(
-      <Hello name={name}/>,
-      document.body
-    );
-  }
+
+  hello: (name) =>
+    React.render(<Hello name={name} links={links}/>, document.body)
 });
 
 $(() => {
