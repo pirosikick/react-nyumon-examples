@@ -13,9 +13,11 @@ const links = [
 ];
 
 const RouteTraget = {
-  hello: (req) => {
-    React.render(<Hello name={req.params.name} links={links}/>, document.body);
-  }
+  hello: (req) =>
+    React.render(
+      <Hello name={req.params.name} links={links}/>,
+      document.body
+    )
 }
 
 Aviator.setRoutes({
@@ -24,6 +26,4 @@ Aviator.setRoutes({
   '/hello/:name': 'hello'
 });
 
-$(() => {
-  Aviator.dispatch()
-});
+$(() => Aviator.dispatch());
