@@ -14,7 +14,8 @@ module.exports = {
   entry: {
     client: './client',
     "16.1.1": './16.1.1.js',
-    "16.1.2": './16.1.2.js'
+    "16.1.2": './16.1.2.js',
+    "16.1.3": './16.1.3.js'
   },
   output: {
     path: path.join(
@@ -29,5 +30,6 @@ module.exports = {
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader?optional=runtime' }
     ]
   },
-  plugins: plugins
+  plugins: plugins,
+  devtool: 'inline-source-map',
 };
