@@ -15,7 +15,8 @@ module.exports = {
     client: './client',
     "16.1.1": './16.1.1.js',
     "16.1.2": './16.1.2.js',
-    "16.1.3": './16.1.3.js'
+    "16.1.3": './16.1.3.js',
+    "flux": "./flux.js"
   },
   output: {
     path: path.join(
